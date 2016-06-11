@@ -1,0 +1,22 @@
+/**
+  Measurements
+ */
+$phone-width: 360;
+$iphone-6-ratio: 2.06;
+
+$phone-border-radius: #{$phone-width / 5.96};
+
+$screen-padding: 14;
+$screen-width: #{$phone-width - 2 * $screen-padding};
+$screen-height: #{1.72 * $screen-width};
+
+$home-width: 55;
+
+/**
+  Colors
+ */
+$phone-white-primary-color: rgb(241, 242, 244);
+$phone-white-border-color: rgb(201, 200, 199);
+$phone-black-primary-color: rgb(10, 10, 10);
+$phone-black-border-color: rgb(125, 124, 115);
+$screen-color: #141414;

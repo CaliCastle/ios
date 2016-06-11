@@ -1,0 +1,201 @@
+.iPhone, .iPhone__side {
+  width: #{$phone-width}px;
+  height: #{$iphone-6-ratio * $phone-width}px;
+}
+
+.iPhone {
+  display: block;
+  position: relative;
+  background: $phone-white-primary-color;
+  border: 5px solid $phone-white-border-color;
+  border-radius: #{$phone-border-radius}px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 3px rgba(0,0,0,0.35);
+
+  @include mod(black) {
+    background: $phone-black-primary-color;
+    border: 5px solid $phone-black-border-color;
+
+    &:before {
+      background: linear-gradient(to right, rgba(255, 255, 255, .15), rgba(255, 255, 255, .005)) !important;
+    }
+
+    .iPhone__home__inner {
+      background: $phone-black-primary-color !important;
+    }
+
+    .iPhone__home__outer {
+      background: radial-gradient(at 41px 10px, #424542, $phone-black-primary-color) !important;
+    }
+
+    & + .iPhone__side .iPhone__stripe {
+      background: $phone-black-primary-color !important;
+    }
+  }
+
+  @include mod(reflection) {
+    &:before {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 110%;
+      top: -30px;
+      left: -60px;
+      position: absolute;
+      background: linear-gradient(to right, rgba(0, 0, 0, .15), rgba(0, 0, 0, .005));
+      z-index: 999;
+      @include transform(rotate(-10deg));
+    }
+  }
+
+  @include has(front) {
+    @include flexbox();
+    position: relative;
+  }
+  
+  @include has(top) {
+    width: calc(100% / 3.3);
+    height: #{$phone-width / 3.3 / 3}px;
+    margin-top: 2em;
+    position: relative;
+  }
+
+  @include has(sensor) {
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #333;
+    margin-bottom: 1em;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+  }
+
+  @include has(camera) {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    width: 8.5px;
+    height: 8.5px;
+    background: #555;
+  }
+  
+  @include has(microphone) {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    margin: 0 27px 0 20px;
+    background: #333;
+    width: calc(100% - 8.5px - 47px);
+    height: 4px;
+  }
+
+  @include has(screen) {
+    width: #{$screen-width}px;
+    height: #{$screen-height}px;
+    padding: 12px #{$screen-padding}px;
+    background: $screen-color;
+    margin: 16px 0 14px;
+    border-radius: 2px;
+  }
+
+  @include has(home) {
+    width: #{$home-width - 5}px;
+    height: #{$home-width - 5}px;
+    position: relative;
+
+    @include has(inner) {
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $phone-white-primary-color;
+      z-index: 9;
+    }
+
+    @include has(outer) {
+      width: calc(100% + 6px);
+      height: calc(100% + 6px);
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      border-radius: 50%;
+      z-index: 2;
+      background: radial-gradient(at 45px 3px, #6b6b6b, $phone-white-primary-color);
+    }
+  }
+
+  @include has(side) {
+    left: 50%;
+    top: 50%;
+    margin-left: -#{$phone-width / 2}px;
+    margin-top: -#{$phone-width * $iphone-6-ratio / 2}px;
+    position: absolute;
+  }
+  
+  @include has(stripes) {
+    position: relative;
+  }
+  
+  @include has(stripe) {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    background: $phone-white-primary-color;
+    
+    &:first-of-type {
+      left: 0;
+      top: 65px;
+    }
+
+    &:nth-of-type(2) {
+      right: 0;
+      top: 65px;
+    }
+
+    &:nth-of-type(3) {
+      left: 0;
+      top: 670px;
+    }
+
+    &:last-of-type {
+      right: 0;
+      top: 670px;
+    }
+  }
+
+  @include has(buttons) {
+    position: relative;
+
+    > div {
+      position: absolute;
+      width: 7px;
+      height: 40px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      background: linear-gradient(to right, darken($phone-white-primary-color, 32%), darken($phone-white-primary-color, 27%) 30%, darken($phone-white-primary-color, 10%) 65%, darken($phone-white-primary-color, 25%) 100%);
+    }
+  }
+
+  @include has(silent) {
+    top: 115px;
+    left: -7px;
+  }
+
+  @include has(vol-up) {
+    top: 185px;
+    left: -7px;
+    height: 55px !important;
+  }
+
+  @include has(vol-down) {
+    top: 248px;
+    left: -7px;
+    height: 55px !important;
+  }
+
+  @include has(lock) {
+    top: 145px;
+    right: -7px;
+    height: 55px !important;
+    @include transform(rotate(180deg));
+  }
+}

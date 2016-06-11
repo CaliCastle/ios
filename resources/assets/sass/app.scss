@@ -1,2 +1,14 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@import "mixins";
+
+/**
+  Settings and base styles
+ */
+@import "settings";
+@import "base";
+
+/**
+  iPhone UIs
+ */
+@import "iphone/device";
