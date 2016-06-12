@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </section>
-            <div class="iPhone__side">
+            <aside class="iPhone__side">
                 <div class="iPhone__stripes">
                     <div class="iPhone__stripe"></div>
                     <div class="iPhone__stripe"></div>
@@ -42,7 +42,7 @@
                     <div class="iPhone__vol-down"></div>
                     <div class="iPhone__lock"></div>
                 </div>
-            </div>
+            </aside>
         </div>
     </main>
 

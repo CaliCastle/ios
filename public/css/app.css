@@ -5830,6 +5830,8 @@ button.close {
       background: radial-gradient(at 41px 10px, #424542, #0a0a0a) !important; }
     .iPhone--black + .iPhone__side .iPhone__stripe {
       background: #0a0a0a !important; }
+    .iPhone--black + .iPhone__side .iPhone__buttons > div {
+      background: linear-gradient(to right, #616a7b, #8d95a5 35%, #b8bdc7 65%, #707b8f 100%) !important; }
   .iPhone--reflection:before {
     content: '';
     display: block;

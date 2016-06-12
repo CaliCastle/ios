@@ -31,6 +31,10 @@
     & + .iPhone__side .iPhone__stripe {
       background: $phone-black-primary-color !important;
     }
+
+    & + .iPhone__side .iPhone__buttons > div {
+      background: linear-gradient(to right, darken($phone-white-primary-color, 52%), darken($phone-white-primary-color, 35%) 35%, darken($phone-white-primary-color, 20%) 65%, darken($phone-white-primary-color, 45%) 100%) !important;
+    }
   }
 
   @include mod(reflection) {
