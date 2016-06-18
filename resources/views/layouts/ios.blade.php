@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>iOS 9网页模拟</title>
+    <title>iOS 10网页模拟</title>
 
     <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
@@ -22,7 +22,23 @@
                             <div class="iPhone__microphone"></div>
                         </div>
                     </div>
-                    <div class="iPhone__screen"></div>
+                    <screen class="iPhone__screen">
+                        <header class="Screen__status-bar">
+                            <aside class="Status__signals">
+                                <div class="Status__carrier" carrier="运营商"></div>
+                                <div class="Status__wifi"></div>
+                            </aside>
+                            <aside class="Status__clock" time="{{ \Carbon\Carbon::now()->format('H:i') }}"></aside>
+                            <aside class="Status__services">
+                                <div class="Status__bluetooth"></div>
+                                <div class="Status__battery"></div>
+                            </aside>
+                        </header>
+                        <div class="Screen__content">
+                            <app></app>
+                            <folder></folder>
+                        </div>
+                    </screen>
                     <div class="iPhone__home">
                         <div class="iPhone__home__outer"></div>
                         <div class="iPhone__home__inner"></div>

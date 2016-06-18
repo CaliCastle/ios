@@ -1,0 +1,114 @@
+// Screen components
+.Screen {
+  @include has(status-bar) {
+    width: 100%;
+    height: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    @include ts(color .2s ease);
+
+    &.light {
+      color: #000 !important;
+    }
+
+    > aside {
+      flex: 1;
+    }
+
+    > aside:nth-of-type(2) {
+      text-align: center;
+    }
+
+    > aside:last-of-type {
+      text-align: right;
+    }
+  }
+  
+  @include has(content) {
+    width: 100%;
+    height: calc(100% - 20px);
+  }
+}
+
+// Status bar
+.Status {
+  @include has(signals) {
+    display: inline-block;
+
+    &:before {
+      content: '\f111\f111\f111\f1db\f1db';
+      font-family: "FontAwesome";
+      font-size: .45em;
+      vertical-align: super;
+      line-height: 20px;
+      letter-spacing: 1.8px;
+      margin-left: 5px;
+    }
+  }
+
+  @include has(carrier) {
+    display: inline-block;
+
+    &:before {
+      content: attr(carrier);
+      font-size: .8em;
+      vertical-align: top;
+      line-height: 15px;
+    }
+  }
+
+  @include has(wifi) {
+    display: inline-block;
+
+    &:before {
+      content: '\f1eb';
+      font-family: "FontAwesome";
+      font-size: .85em;
+      line-height: 16px;
+      vertical-align: top;
+    }
+  }
+
+  @include has(clock) {
+    &:before {
+      content: attr(time);
+      font-size: .85em;
+      font-weight: 500;
+      line-height: 20px;
+      vertical-align: super;
+    }
+  }
+
+  @include has(services) {
+    &:last-child {
+      margin-right: 5px;
+    }
+  }
+
+  @include has(bluetooth) {
+    display: inline-block;
+
+    &:before {
+      content: '\f294';
+      font-family: "FontAwesome";
+      font-size: 1.15em;
+      line-height: 18px;
+      vertical-align: top;
+      margin-right: 2px;
+      color: #555;
+    }
+  }
+
+  @include has(battery) {
+    display: inline-block;
+
+    &:before {
+      content: '\f240';
+      font-family: "FontAwesome";
+      line-height: 18px;
+      font-size: 1.15em;
+      vertical-align: top;
+    }
+  }
+}

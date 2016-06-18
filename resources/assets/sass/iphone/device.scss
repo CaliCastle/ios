@@ -93,10 +93,12 @@
   @include has(screen) {
     width: #{$screen-width}px;
     height: #{$screen-height}px;
-    padding: 12px #{$screen-padding}px;
+    //padding: 12px #{$screen-padding}px;
     background: $screen-color;
+    position: relative;
     margin: 16px 0 14px;
     border-radius: 2px;
+    overflow: hidden;
   }
 
   @include has(home) {
