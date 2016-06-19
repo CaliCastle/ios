@@ -12,8 +12,19 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: $main-bg;
     @include flexbox();
+
+    &:before {
+      content: '';
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(50% 50%, rgba(255, 255, 255, .5), rgba($main-bg, .3));
+    }
   }
 }
 

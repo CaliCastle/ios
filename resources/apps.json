@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Snapchat",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/23c5bdd149b396f5a334f5abc99f65565fcd4a3af325e44ea6975ce043e6f84e.jpg",
+        "badge": "0"
+    },
+    {
+        "name": "Abletive",
+        "icon": "http://a4.mzstatic.com/us/r30/Purple60/v4/1c/71/67/1c71677d-5a0e-e538-3bb1-b7e535e7b296/icon175x175.png",
+        "badge": "0"
+    },
+    {
+        "name": "Facebook",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/b5d0271d8ff957add4f7a3a071e01ae0531426d677fb0c860558b08b885ad4c4.jpg",
+        "badge": "10"
+    },
+    {
+        "name": "Instagram",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/75d8cb2ade08794d61c17680a479ce0e82e451b02691e47222ffc26e054603a8.jpg",
+        "badge": "5"
+    },
+    {
+        "name": "YouTube",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/fe56c2dc3d3c12e9affc0e04a41b99bcea959d48bb74d2c1c0ea84f1ea105d28.jpg",
+        "badge": "0"
+    },
+    {
+        "name": "Spotify",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/974fcc0ed399a35a01ea907a555b75429139fe8d0b322c98917f3af3a21c36ed.jpg",
+        "badge": "1"
+    },
+    {
+        "name": "Uber",
+        "icon": "http://images.apple.com/autopush/us/itunes/charts/free-apps/images/2016/6/79f22371f804a961e6ba8ad5dc30a7342105cd025892603d0d19c71f22fea702.jpg",
+        "badge": "0"
+    }
+]

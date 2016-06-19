@@ -29,7 +29,7 @@
     }
 
     & + .iPhone__side .iPhone__stripe {
-      background: $phone-black-primary-color !important;
+      background: rgb(69, 70, 74) !important;
     }
 
     & + .iPhone__side .iPhone__buttons > div {
@@ -99,6 +99,7 @@
     margin: 16px 0 14px;
     border-radius: 2px;
     overflow: hidden;
+    z-index: 5;
   }
 
   @include has(home) {
