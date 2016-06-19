@@ -6025,8 +6025,34 @@ body {
   left: 0;
   width: 100%;
   height: 80px;
-  background: #444;
-  padding-top: 7.5px; }
+  padding-top: 7.5px;
+  background: inherit;
+  background-position: center 100%;
+  background-size: initial;
+  overflow: hidden; }
+  .Screen__dock:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    top: -25px;
+    left: -25px;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    background: inherit; }
+  .Screen__dock:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1; }
 
 .Status__signals {
   display: inline-block; }
@@ -6096,7 +6122,8 @@ body {
   margin-bottom: 3px; }
 
 folder, app {
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 10; }
 
 .App__icon {
   position: relative; }
