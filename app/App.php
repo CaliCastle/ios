@@ -10,7 +10,7 @@ class App extends Model
 
     /**
      * Get all default apps.
-     * 
+     *
      * @return array
      */
     public static function defaultApps()

@@ -1,4 +1,4 @@
-# iOS Homescreen Simulation
+# iOS Homescreen HTML Simulation
 
 Developed by Cali
 
